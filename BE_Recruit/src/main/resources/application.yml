@@ -4,7 +4,7 @@ server:
 spring:
   mail:
     host: smtp.gmail.com
-    username: trung03trung@gmail.com
+    username: hung03hung@gmail.com
     password: yhzztttnihpqlclt
     port: 587
     properties:
@@ -15,16 +15,16 @@ spring:
             enable: true
 
   datasource:
-    driver-class-name: oracle.jdbc.driver.OracleDriver
-    url: jdbc:oracle:thin:@localhost:1521:xe
-    username: DB1
-    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/Recruits
+    username: root
+    password: hung123
 
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update
-    database-platform: org.hibernate.dialect.OracleDialect
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
 
 application:
   security:
